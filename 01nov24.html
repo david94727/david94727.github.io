@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>31 октября 2024</title>
+    <style>
+        #rul {
+            transition: transform 0.1s linear;
+        }
+    </style>
+</head>
+<body>
+    <h1>Колесо рулетки</h1>
+    <img src="rul.png" id="rul" alt="Колесо рулетки">
+    <button onclick="stopRul()">СТОП</button>
+    <button onclick="startRul()">CTAPT</button>
+
+    <script>
+        let rul = document.getElementById('rul');
+        let angle = 0;
+        let timer;
+
+        function rotateRul() {
+            angle += 2; // Увеличиваем угол вращения
+            rul.style.transform = 'rotate(' + angle + 'deg)'; // Применяем вращение
+        }
+
+        function startRul() {
+            timer = setInterval(rotateRul, 10); // Запускаем вращение
+        }
+
+        function stopRul() {
+            clearInterval(timer); // Останавливаем вращение
+        }
+    </script>
+</body>
+</html>
