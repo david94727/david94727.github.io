@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html lang="ru"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>8 ноября 2024</title> 
+</head> 
+<body> 
+    <script> 
+        function drawBox(size) { 
+            let box = document.createElement('div'); 
+            box.style.width = size + 'px'; 
+            box.style.height = size + 'px'; 
+            //box.style.backgroundColor = 'green'; 
+            box.style.border = '1px solid darkgreen'; 
+            document.body.append(box); 
+            drawBox(size/2)
+        } 
+ 
+        drawBox(500); 
+    </script> 
+</body> 
+</html>
